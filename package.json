@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "scripts": {
     "dev": "ts-node-dev --respawn src/server.ts",
-    "build": "tsc",
+    "clean": "npx rimraf dist",
+    "build": "npx rimraf dist && npx tsc",
     "start": "node dist/server.js",
     "download:csv": "ts-node src/utils/downloadCsv.ts",
     "import": "ts-node src/utils/importCsv.ts",
@@ -31,6 +32,7 @@
     "@types/jsonwebtoken": "^9.0.1",
     "@types/multer": "^1.4.7",
     "@types/node": "^18.19.104",
+    "rimraf": "^5.0.5",
     "ts-node": "^10.9.1",
     "ts-node-dev": "^2.0.0",
     "typescript": "^5.8.3"
