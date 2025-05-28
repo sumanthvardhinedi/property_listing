@@ -2,6 +2,7 @@ services:
   - type: web
     name: property-listing-backend
     env: node
+    plan: free
     buildCommand: npm ci && npm run build
     startCommand: node dist/server.js
     envVars:
@@ -16,4 +17,16 @@ services:
       - key: REDIS_URL
         sync: false
     healthCheckPath: /api/health
-    autoDeploy: true 
+    autoDeploy: true
+    scaling:
+      minInstances: 1
+      maxInstances: 1
+    headers:
+      - path: /*
+        name: X-Frame-Options
+        value: DENY
+      - path: /*
+        name: X-Content-Type-Options
+        value: nosniff
+    domains:
+      - property-listing-backend.onrender.com 
