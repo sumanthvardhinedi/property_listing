@@ -2,18 +2,18 @@ services:
   - type: web
     name: property-listing-backend
     env: node
-    buildCommand: npm install && npm run build
-    startCommand: npm start
+    buildCommand: npm ci && npm run build
+    startCommand: node dist/server.js
     envVars:
       - key: NODE_ENV
         value: production
       - key: PORT
-        value: 3000
+        value: 10000
       - key: MONGODB_URI
         sync: false
       - key: JWT_SECRET
         sync: false
       - key: REDIS_URL
         sync: false
-    healthCheckPath: /
+    healthCheckPath: /api/health
     autoDeploy: true 
