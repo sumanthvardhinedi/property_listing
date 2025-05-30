@@ -71,10 +71,6 @@ A TypeScript/Node.js backend for managing property listings with CRUD operations
 - **POST /api/users/recommend:** Recommend a property to another user (auth required).
 - **GET /api/users/recommendations:** Get recommendations received (auth required).
 
-## Deployment
-
-The backend is deployed on [Render](https://property-listing-huon.onrender.com).
-
 ## License
 
 ISC 
