@@ -1,5 +1,9 @@
 # Property Listing Backend
 
+> **Deployed Backend:** [https://property-listing-huon.onrender.com](https://property-listing-huon.onrender.com)
+> 
+> **Health Check:** [https://property-listing-huon.onrender.com/api/health](https://property-listing-huon.onrender.com/api/health)
+
 ## Project Overview
 
 This backend system is designed for managing property listings, supporting user authentication, CRUD operations, advanced filtering, property favorites, recommendations, and caching. It is built as part of the SDE Intern Backend Assignment and demonstrates real-world backend engineering skills using TypeScript, Node.js, MongoDB, and Redis.
@@ -57,7 +61,7 @@ This backend system is designed for managing property listings, supporting user 
 
 1. **Clone the repository:**
    ```bash
-   git clone <your-repo-url>
+   git clone https://github.com/sumanthvardhinedi/property_listing.git
    cd property-listing-backend
    ```
 
@@ -67,7 +71,7 @@ This backend system is designed for managing property listings, supporting user 
    ```
 
 3. **Environment Variables:**
-   Create a `.env` file in the root directory with the following variables:
+   Create a `.env` file in the root directory with the following variables (replace placeholders with your actual credentials):
    ```
    MONGODB_URI=mongodb+srv://<username>:<password>@<cluster-url>/<database>?retryWrites=true&w=majority
    REDIS_URL=redis://<username>:<password>@<redis-url>:<port>
@@ -85,6 +89,14 @@ This backend system is designed for managing property listings, supporting user 
    npm run build
    npm start
    ```
+
+## Health Check
+
+To verify the backend is running, visit:
+```
+GET /api/health
+```
+Example: [https://property-listing-huon.onrender.com/api/health](https://property-listing-huon.onrender.com/api/health)
 
 ## API Endpoints
 
